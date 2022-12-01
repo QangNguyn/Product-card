@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f8fafc !important;
+}
+.product-card {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 20px;
+  cursor: pointer;
+  &__img {
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    img {
+      width: 50%;
+      object-fit: contain;
+    }
+    &--actions-wrap {
+      position: absolute;
+      bottom: -50px;
+      display: flex;
+      opacity: 0;
+      transition: 0.5s;
+      div {
+        padding: 8px 18px;
+        border-radius: 20px;
+        background-color: #0f172a;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 500;
+        .img__icon {
+          margin-right: 8px;
+        }
+      }
+      div:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      .img__add-cart {
+        margin-right: 10px;
+      }
+      .img__view-more {
+        background-color: #f8fafc;
+        color: #0f172a;
+      }
+    }
+    &--like-btn {
+      width: 35px;
+      height: 35px;
+      background-color: #f8fafc;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      font-size: 20px;
+    }
+  }
+  &__img:hover {
+    cursor: pointer;
+    .product-card__img--actions-wrap {
+      bottom: 20px;
+      opacity: 1;
+    }
+  }
+  &__info {
+    padding-left: 14px;
+    padding-right: 14px;
+    p {
+      margin-bottom: 0;
+      line-height: 20px;
+    }
+    &-name {
+      color: #0f1751;
+      font-size: 18px;
+      font-weight: 600;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding-top: 24px;
+    }
+    &-category {
+      padding: 12px 0;
+      font-size: 18px;
+      color: #8792a0;
+      text-transform: capitalize;
+    }
+    &-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      .info__price {
+        border: 2px solid #22c55e;
+        border-radius: 7px;
+        padding: 10px 12px;
+        line-height: 100%;
+        span {
+          color: #22c55e;
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+      .info__rating {
+        font-size: 16px;
+        color: #8290a1;
+        display: flex;
+        align-items: center;
+        .star-icon {
+          color: #fbbf24;
+          font-size: 20px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
